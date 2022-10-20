@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Tao moi</title>
+</head>
+<body>
+<form th:object="${customer}" method="post">
+  <table>
+    <tr>Name</tr>
+    <tr>
+      <input type="text " th:field="*{name}" name="name">
+    </tr>
+    <tr>Address</tr>
+    <tr>
+      <input type="text " th:field="*{address}" name="address">
+    </tr>
+    <tr></tr>
+    <tr>
+      <input type="submit" value="tao moi">
+    </tr>
+
+
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Danh sach Khach Hang</title>
+</head>
+<body>
+<h1>Danh sach khach hang</h1>
+<table border="1">
+  <thead>
+  <th>name</th>
+  <th>email</th>
+  <th>address</th>
+  </thead>
+  <tbody>
+  <th:block th:each="customer: ${customers}">
+    <tr>
+      <td th:text="${customer.getName()}"></td>
+      <td th:text="${customer.getEmail()}"></td>
+      <td th:text="${customer.getAddress()}"></td>
+    </tr>
+  </th:block>
+  </tbody>
+</table>
+</body>
+</html>
